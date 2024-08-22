@@ -1,0 +1,30 @@
+<header>
+  <div class="header-left">
+    <button class="menu-btn" (click)="toggleMenu()">&#9776;</button>
+  </div>
+  <div class="header-center">
+    <!-- Resim yolu tam olarak belirtilmeli -->
+    <img src="https://www.vakko.com/assets/img/logo2.svg" alt="Vakko Logo" class="logo">
+    
+  </div>
+  <div class="header-right">
+    <button class="search-btn" (click)="toggleSearch()">🔍</button>
+    <button class="profile-btn">👤</button>
+    <button class="cart-btn">🛒</button>
+  </div>
+</header>
+
+<!-- Soldan çıkan menü -->
+<div class="side-menu" [class.active]="menuActive">
+  <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Arama çubuğu -->
+<div class="search-bar" *ngIf="searchActive">
+  <input type="text" placeholder="Search...">
+</div>

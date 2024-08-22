@@ -1,0 +1,25 @@
+<!-- home.component.html -->
+<div class="hero-section">
+    <img src="assets/hero-image.jpg" alt="Vakko Hero" class="hero-image">
+    <div class="hero-text">
+      <h1>Vakko</h1>
+      <p>Elegant and Timeless Fashion</p>
+    </div>
+  </div>
+  
+  <section class="featured-products">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of featuredProducts">
+        <img [src]="product.image" alt="{{product.name}}">
+        <h3>{{product.name}}</h3>
+        <p>{{product.price}}</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="about-us">
+    <h2>About Vakko</h2>
+    <p>Vakko is synonymous with luxury and fashion. Discover our latest collections and timeless pieces.</p>
+  </section>
+  

@@ -1,0 +1,47 @@
+.carousel-container {
+  position: relative;
+  width: 300px; /* Carousel genişliğini ayarlayabilirsin */
+  height: 500px; /* Carousel yüksekliğini ayarlayabilirsin */
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button:hover {
+  opacity: 1;
+}

@@ -1,0 +1,76 @@
+/* header.component.css */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .header-left .menu-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header-center .logo {
+    max-height: 50px;
+  }
+  
+  .header-right button {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  /* Soldan çıkan menü */
+  .side-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  
+  .side-menu.active {
+    left: 0;
+  }
+  
+  .side-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .side-menu ul li {
+    padding: 10px 20px;
+  }
+  
+  .side-menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Arama çubuğu */
+  .search-bar {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 300px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

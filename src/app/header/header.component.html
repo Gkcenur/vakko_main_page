@@ -3,9 +3,7 @@
     <button class="menu-btn" (click)="toggleMenu()">&#9776;</button>
   </div>
   <div class="header-center">
-    <!-- Resim yolu tam olarak belirtilmeli -->
     <img src="https://www.vakko.com/assets/img/logo2.svg" alt="Vakko Logo" class="logo">
-    
   </div>
   <div class="header-right">
     <button class="search-btn" (click)="toggleSearch()">🔍</button>
@@ -14,17 +12,297 @@
   </div>
 </header>
 
-<!-- Soldan çıkan menü -->
+<!-- Side menu with specified buttons -->
 <div class="side-menu" [class.active]="menuActive">
   <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
+    <li><a href="#" (click)="toggleSubmenu('kadın')">Kadın</a></li>
+    <li><a href="#" (click)="toggleSubmenu('erkek')">Erkek</a></li>
+    <li><a href="#" (click)="toggleSubmenu('shoesBags')">Shoes & Bags</a></li>
+    <li><a href="#" (click)="toggleSubmenu('v2kDesigners')">V2K Designers</a></li>
+    <li><a href="#" (click)="toggleSubmenu('mare')">Mare</a></li>
+    <li><a href="#" (click)="toggleSubmenu('couture')">Couture</a></li>
+    <li><a href="#" (click)="toggleSubmenu('weeding')">Wedding</a></li>
+    <li><a href="#" (click)="toggleSubmenu('vakkoroma')">Vakkoroma</a></li>
+    <li><a href="#" (click)="toggleSubmenu('home')">Home</a></li>
+    <li><a href="#" (click)="toggleSubmenu('kozmetik')">Kozmetik</a></li>
+    <li><a href="#" (click)="toggleSubmenu('latelier')">L'Atelier</a></li>
+    <li><a href="#" (click)="toggleSubmenu('outlet')">Outlet</a></li>
   </ul>
 </div>
 
-<!-- Arama çubuğu -->
+<!-- Submenü -->
+<div *ngIf="submenuActive === 'kadın'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">GİYİM</a></li>
+      <li><a href="#">Elbise & Tulum</a></li>
+      <li><a href="#">Ceket</a></li>
+      <li><a href="#">Gömlek & Bluz</a></li>
+      <li><a href="#">T-Shirt & Sweatshirt</a></li>
+      <li><a href="#">Triko</a></li>
+      <li><a href="#">Pantolon</a></li>
+      <li><a href="#">Etek</a></li>
+      <li><a href="#">Bermuda & Şort</a></li>
+      <li><a href="#">Dış Giyim</a></li>
+      <li><a href="#">AKSESUAR</a></li>
+      <li><a href="#">Takı</a></li>
+      <li><a href="#">Şapka</a></li>
+      <li><a href="#">Kemer</a></li>
+      <li><a href="#">Şal</a></li>
+      <li><a href="#">EŞARP & ŞAL KOLEKSİYONU</a></li>
+      <li><a href="#">Eşarp</a></li>
+      <li><a href="#">Şal</a></li>
+      <li><a href="#">Fular & Gavroş & Bandana</a></li>
+      <li><a href="#">Çağdaş Türk Sanatçıları Koleksiyonu</a></li>
+      <li><a href="#">İsme Özel Eşarp</a></li>
+      <li><a href="#">Büyük Yaz İndirimi - %50</a></li>
+      <li><a href="#">URBAN GLAM</a></li>
+      <li><a href="#">GLAMOUR</a></li>
+      <li><a href="#">SILENT CHIC</a></li>
+      <li><a href="#">COOL CASUAL</a></li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="submenuActive === 'erkek'" class="submenu active">
+  <!-- Erkek submenu content -->
+  <div class="column">
+    <ul>
+      <li><a href="#">GİYİM</a></li>
+      <li><a href="#">Ceket</a></li>
+      <li><a href="#">Takım Elbise</a></li>
+      <li><a href="#">Smokin</a></li>
+      <li><a href="#">Gömlek</a></li>
+      <li><a href="#">T-Shirt & Sweatshirt</a></li>
+      <li><a href="#">Triko</a></li>
+      <li><a href="#">Pantolon</a></li>
+      <li><a href="#">Bermuda & Şort</a></li>
+      <li><a href="#">Dış Giyim</a></li>
+      <li><a href="#">Plaj Giyim</a></li>
+      <li><a href="#">İç Giyim</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <ul>
+      <li><a href="#">AKSESUAR</a></li>
+      <li><a href="#">Kravat</a></li>
+      <li><a href="#">Mendil</a></li>
+      <li><a href="#">Papyon</a></li>
+      <li><a href="#">Kemer</a></li>
+      <li><a href="#">Çorap</a></li>
+      <li><a href="#">Bileklik</a></li>
+      <li><a href="#">Kol Düğmesi</a></li>
+      <li><a href="#">AW 24/25</a></li>
+      <li><a href="#">VAKKO ERKEK SS 24</a></li>
+      <li><a href="#">Büyük Yaz İndirimi - %50</a></li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="submenuActive === 'shoesBags'" class="submenu active">
+  <!-- Shoes & Bags submenu content -->
+  <div class="column">
+    <ul>
+      <li><a href="#">KADIN</a></li>
+      <li><a href="#">Ayakkabı</a></li>
+      <li><a href="#">Çanta</a></li>
+      <li><a href="#">Cüzdan</a></li>
+      <li><a href="#">V2K Designers Ayakkabı & Çanta</a></li>
+      <li><a href="#">Monogram</a></li>
+      <li><a href="#">Monogram Initials Koleksiyonu</a></li>
+      <li><a href="#">Monogram Exclusive</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <ul>
+      <li><a href="#">ERKEK</a></li>
+      <li><a href="#">Ayakkabı</a></li>
+      <li><a href="#">Çanta</a></li>
+      <li><a href="#">Monogram</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div *ngIf="submenuActive === 'v2kDesigners'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">Giyim</a></li>
+      <li><a href="#">Elbise</a></li>
+      <li><a href="#">Tulum</a></li>
+      <li><a href="#">Total Look</a></li>
+      <li><a href="#">Ceket</a></li>
+      <li><a href="#">Gömlek</a></li>
+      <li><a href="#">Bluz</a></li>
+      <li><a href="#">T-Shirt</a></li>
+      <li><a href="#">Sweatshirt</a></li>
+      <li><a href="#">Triko</a></li>
+      <li><a href="#">Pantolon</a></li>
+      <li><a href="#">Jean Pantolon</a></li>
+      <li><a href="#">Etek</a></li>
+      <li><a href="#">Bermuda & Sort</a></li>
+      <li><a href="#">Diş Giyim</a></li>
+      <li><a href="#">İç Giyim</a></li>
+      <li><a href="#">Plaj</a></li>
+      <li><a href="#">Ayakkabi & Çanta</a></li>
+      <li><a href="#">Aksesuar</a></li>
+      <li><a href="#">V2K SS 24</a></li>
+      <li><a href="#">Büyük Yaz İndirimi - %50</a></li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="submenuActive === 'mare'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">Plaj Giyim</a></li>
+      <li><a href="#">Mayo & Bikini</a></li>
+      <li><a href="#">Sandalet & Terlik</a></li>
+      <li><a href="#">Aksesuar</a></li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="submenuActive === 'couture'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">Elbise</a></li>
+      <li><a href="#">Kokteyl Elbise</a></li>
+      <li><a href="#">Aksesuar</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div *ngIf="submenuActive === 'home'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">EV DEKORASYONU</a></li>
+      <li><a href="#">Mobilya</a></li>
+      <li><a href="#">Ofis Aksesuarları</a></li>
+      <li><a href="#">Dekoratif Ev Aksesuarları</a></li>
+      <li><a href="#">Hobi Aksesuarları</a></li>
+      <li><a href="#">Sofra</a></li>
+      <li><a href="#">Mum & Oda Kokusu</a></li>
+      <li><a href="#">Banyo Aksesuarları</a></li>
+      <li><a href="#">EV TEKSTİLİ</a></li>
+      <li><a href="#">Exclusive Line</a></li>
+      <li><a href="#">Yatak Tekstili</a></li>
+      <li><a href="#">Masa Tekstili</a></li>
+      <li><a href="#">Banyo Tekstili</a></li>
+      <li><a href="#">CRUISE</a></li>
+      <li><a href="#">Tekne Aksesuarları</a></li>
+      <li><a href="#">Dış Mekan Yastıkları</a></li>
+      <li><a href="#">DEKORATİF YASTIKLAR</a></li>
+      <li><a href="#">Klasik Dekor Yastıkları</a></li>
+      <li><a href="#">Sezon Yastıkları</a></li>
+      <li><a href="#">EL VE VÜCUT BAKIMI</a></li>
+      <li><a href="#">CHRISTOFLE</a></li>
+      <li><a href="#">Mum & Şamdan</a></li>
+      <li><a href="#">Dekoratif Obje</a></li>
+      <li><a href="#">Çatal & Bıçak Seti</a></li>
+      <li><a href="#">Sofra Aksesuarları</a></li>
+      <li><a href="#">Temizleme Ürünleri</a></li>
+      <li><a href="#">EVLİLİK LİSTESİ KATALOĞU</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div *ngIf="submenuActive === 'kozmetik'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">ERKEK PARFÜM</a></li>
+      <li><a href="#">Infiniti For Him</a></li>
+      <li><a href="#">Infiniti For Him 2'li Set</a></li>
+      <li><a href="#">V De Vakko</a></li>
+      <li><a href="#">V De Vakko 2'li Set</a></li>
+      <li><a href="#">Infiniti For Us</a></li>
+      <li><a href="#">KADIN PARFÜM</a></li>
+      <li><a href="#">Infiniti For Her</a></li>
+      <li><a href="#">Infiniti For Her Glam</a></li>
+      <li><a href="#">Infiniti For Her Grey</a></li>
+      <li><a href="#">Infiniti For Us</a></li>
+      <li><a href="#">Katia</a></li>
+      <li><a href="#">Infiniti For Her 2'li Set</a></li>
+      <li><a href="#">Infiniti For Her 3'lü Set</a></li>
+      <li><a href="#">Infiniti For Her Body Mist</a></li>
+      <li><a href="#">Katia 2'li Set</a></li>
+      <li><a href="#">UNISEX PARFÜM</a></li>
+      <li><a href="#">Infiniti For Us</a></li>
+      <li><a href="#">HEDİYE SETLERİ</a></li>
+      <li><a href="#">Kadın Hediye Setleri</a></li>
+      <li><a href="#">Erkek Hediye Setleri</a></li>
+      <li><a href="#">Kolonya Hediye Setleri</a></li>
+      <li><a href="#">KOLONYA</a></li>
+      <li><a href="#">Riga Amber</a></li>
+      <li><a href="#">Bois De Cedre Atlas</a></li>
+      <li><a href="#">Marine Imperial</a></li>
+      <li><a href="#">Citrus</a></li>
+      <li><a href="#">Leather</a></li>
+      <li><a href="#">Blue Suede</a></li>
+      <li><a href="#">Tangerine & Manderine</a></li>
+      <li><a href="#">Atmosphere</a></li>
+      <li><a href="#">OJE</a></li>
+      <li><a href="#">EL VE VÜCUT BAKIMI</a></li>
+      <li><a href="#">Sıvı Sabunlar</a></li>
+      <li><a href="#">Sabunlar</a></li>
+      <li><a href="#">Body Mist</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div *ngIf="submenuActive === 'latelier'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">ÇİKOLATALAR</a></li>
+      <li><a href="#">Klasik Çikolatalar</a></li>
+      <li><a href="#">El Yapımı Çikolatalar</a></li>
+      <li><a href="#">Atıştırmalık Çikolatalar</a></li>
+      <li><a href="#">Patisserie</a></li>
+      <li><a href="#">Delight</a></li>
+      <li><a href="#">Ice Cream</a></li>
+      <li><a href="#">Bistrot</a></li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="submenuActive === 'outlet'" class="submenu active">
+  <div class="column">
+    <ul>
+      <li><a href="#">KADIN</a></li>
+      <li><a href="#">Giyim</a></li>
+      <li><a href="#">Aksesuar</a></li>
+      <li><a href="#">Eşarp & Şal Koleksiyonu</a></li>
+      <li><a href="#">ERKEK</a></li>
+      <li><a href="#">Giyim</a></li>
+      <li><a href="#">Aksesuar</a></li>
+      <li><a href="#">SHOES & BAGS</a></li>
+      <li><a href="#">Kadın</a></li>
+      <li><a href="#">Erkek</a></li>
+      <li><a href="#">Monogram</a></li>
+      <li><a href="#">COUTURE</a></li>
+      <li><a href="#">Elbise</a></li>
+      <li><a href="#">V2K DESIGNERS</a></li>
+      <li><a href="#">Kadın</a></li>
+      <li><a href="#">Erkek</a></li>
+      <li><a href="#">MARE</a></li>
+      <li><a href="#">Plaj Giyim</a></li>
+      <li><a href="#">Mayo & Bikini</a></li>
+      <li><a href="#">Sandalet & Terlik</a></li>
+      <li><a href="#">Aksesuar</a></li>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">Ev Dekorasyonu</a></li>
+      <li><a href="#">Ev Tekstili</a></li>
+      <li><a href="#">Dekoratif Yastıklar</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Search bar -->
 <div class="search-bar" *ngIf="searchActive">
   <input type="text" placeholder="Search...">
 </div>

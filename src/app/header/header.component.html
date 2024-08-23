@@ -12,7 +12,7 @@
   </div>
 </header>
 
-<!-- Side menu with specified buttons -->
+
 <div class="side-menu" [class.active]="menuActive">
   <ul>
     <li><a href="#" (click)="toggleSubmenu('kadın')">Kadın</a></li>
@@ -65,7 +65,7 @@
 </div>
 
 <div *ngIf="submenuActive === 'erkek'" class="submenu active">
-  <!-- Erkek submenu content -->
+
   <div class="column">
     <ul>
       <li><a href="#">GİYİM</a></li>
@@ -100,7 +100,7 @@
 </div>
 
 <div *ngIf="submenuActive === 'shoesBags'" class="submenu active">
-  <!-- Shoes & Bags submenu content -->
+
   <div class="column">
     <ul>
       <li><a href="#">KADIN</a></li>

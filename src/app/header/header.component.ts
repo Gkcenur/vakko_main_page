@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   menuActive = false;
   searchActive = false;
-  submenuActive: string | null = null;  // Holds the active submenu
+  submenuActive: string | null = null;  
 
   toggleMenu() {
     this.menuActive = !this.menuActive;

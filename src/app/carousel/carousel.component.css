@@ -1,7 +1,7 @@
 .carousel-container {
   position: relative;
-  width: 300px; /* Carousel genişliğini ayarlayabilirsin */
-  height: 500px; /* Carousel yüksekliğini ayarlayabilirsin */
+  width: 300px; 
+  height: 500px; 
   overflow: hidden;
 }
 
